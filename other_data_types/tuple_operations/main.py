@@ -9,10 +9,6 @@ shelf1_concat = shelf1 + shelf1_update_tuple
 celery_count = shelf1_concat.count("celery")
 celery_index = shelf1_concat.index("celery")
 
-
-
-#celery_index = shelf1_concat.count(celery_count)
-
 print("updated Shelf #1:", str(shelf1_concat))
 print("Number of Celery:", celery_count)
 print("Celery Index:", celery_index)
