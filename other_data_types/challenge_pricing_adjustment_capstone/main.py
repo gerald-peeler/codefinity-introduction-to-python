@@ -20,16 +20,9 @@ print("Inventory after adding Tomatoes:", (grocery_inventory))
 # Task 4 - Manage Stock - Check and restock Milk
 if grocery_inventory["Milk"][2] < 10:
     print("Milk needs to be restocked. Increasing stock by 20 units.")          
-    grocery_inventory.update({"Milk": ("Dairy", 3.50, 8 + 20)})
-        
+    grocery_inventory.update({"Milk": ("Dairy", 3.50, 8 + 20)})        
 else:
     print("Milk has sufficient stock")
-
-# if grocery_inventory["Milk"][2] < 10:
-#     print("Milk needs to be restocked. Increasing stock by 20 units.")
-#     grocery_inventory.update({"Milk": ("Dairy", 4.5, 8 + 20)}) 
-# else:
-#     print("Milk has sufficient stock")
 
 # Task 5 - Remove Item Based on Price
 if grocery_inventory["Apples"][1] > 2:
