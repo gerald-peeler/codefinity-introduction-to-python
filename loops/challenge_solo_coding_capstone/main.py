@@ -11,10 +11,19 @@ max_stock = 100
 
 for item in inventory:
     print("Processing", item)
-    inventory_item = current_stock, regular_price, discounted_price = inventory[item]
-    if inventory_item[1] <= min_stock:
-        print("Current Stock for", (item), "is", inventory_item[0],               
-              "and meets or exceeds the minimum stock level. No action required at this time.")  
+    inventory_item = current_stock, regular_price, discounted_price = inventory[item]   
+    print(inventory[item][0])
+    if inventory[item][0] <= min_stock:
+            print("The current minimum stock level is ", min_stock)
+    if inventory[item][0] >= max_stock:
+            print("The current minimum stock level is greater than ", min_stock, item, "discount")
+
+
+  #  print("Current stock of", item, "is", inventory_item[0])
+    
+    # if inventory[item][0] <= min_stock:
+    #     print("Current Stock for", (item), "is", inventory_item[0],               
+    #           "and meets or exceeds the minimum stock level. No action required at this time.")  
    
 
 
