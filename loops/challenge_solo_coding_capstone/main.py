@@ -5,46 +5,44 @@ inventory = {
     "Apples": [9, 1.50, 1.35]   # Apples need to be restocked
 }
 
-print("Processing Started...")
 min_stock = 30
 max_stock = 100
 
 for item in inventory:
-    print("Processing", item)
-    inventory_item = current_stock, regular_price, discounted_price = inventory[item]   
-   # print(inventory[item][0])
-    if inventory[item][0] <= min_stock:
-            print("The current minimum stock level is ", min_stock)
-    if inventory[item][0] >= max_stock:
-            print("The current minimum stock level is greater than", min_stock, item, "discount")
-    if inventory[item][0] >= min_stock and inventory[item][0] <= max_stock:
-            print(f"{item} should be sold at the discounted price of", inventory[item][2])
+    stock, regular_price, discounted_price = inventory[item]
+
+    if stock < 30:
+        print(f"{item} need restocking.")
+    elif stock > 100:
+        print(f"{item} should be sold at the discounted price of {discounted_price}.")
+    else:
+        print(f"{item} should be sold at the regular price of {regular_price}.")
 
 
-  #  print("Current stock of", item, "is", inventory_item[0])
-    
-    # if inventory[item][0] <= min_stock:
-    #     print("Current Stock for", (item), "is", inventory_item[0],               
-    #           "and meets or exceeds the minimum stock level. No action required at this time.")  
+
+
+
+
+
+
+
+
+
+
+# for item in inventory:
+#     print("Processing", item)
+#     inventory_item = current_stock, regular_price, discounted_price = inventory[item]   
    
+#     if inventory[item][0] <= min_stock:
+#             print(f"{item} needs restocking.")
+           
+#     if inventory[item][0] >= max_stock:
+#             print(f"{item} should be sold at the discounted price of {inventory[item][2]:.2f}")
+#            # print(f"{item} should be sold at the discounted price of {inventory[item][2]:.2f}")
+           
+#     if inventory[item][0] >= min_stock and inventory[item][0] <= max_stock:
+#             print(f"{item} should be sold at the regular price of {inventory[item][1]:.2f}")
 
-
-
-# elseif
-    # inventory_item[1] >= min_stock
-    # print("Current stock level exceeds minimun stock.")
-            
-        
-        
-    
-    #if item[0] < min_stock:
-     #   print("Current Stock for ", inventory_item) 
-
-    
-  #  print(inventory_item)
-   # while currrent_stock <= 30:
-      #  print("Current Stock is", current_stock[item[0])
-        #if currrent_stock > 100:
-         #   print("")
-
-    
+   
+         
+ 
